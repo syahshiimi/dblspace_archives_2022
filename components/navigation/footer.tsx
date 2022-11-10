@@ -1,7 +1,7 @@
 const Footer = () => {
     return (
-        <footer className="flex flex-row font-ligh">
-            Inspired by the floating DVD and in no way relaetd to it.
+        <footer className="flex flex-row font-thin italic text-sm">
+            Inspired by the floating DVD and in no way related to it.
         </footer>
 
     )
