@@ -4,7 +4,7 @@ import FloatingPills from '../components/floatingpills'
 import { Dialog, Transition } from '@headlessui/react'
 
 export default function Home() {
-    let [isOpen, setIsOpen] = useState(true)
+    let [isOpen, setIsOpen] = useState(false)
 
     return (
         <>
@@ -55,16 +55,16 @@ export default function Home() {
                     <FloatingPills pillColor="bg-mikado-yellow gap-4" setIsOpen={setIsOpen} isOpen={isOpen}>
                         Green Screen Machine
                     </FloatingPills>
-                    <FloatingPills pillColor="bg-brilliant-azure">
+                    <FloatingPills pillColor="bg-brilliant-azure" setIsOpen={setIsOpen} isOpen={isOpen}>
                         Field Recordings
                     </FloatingPills>
-                    <FloatingPills pillColor="bg-willpower-orange">
+                    <FloatingPills pillColor="bg-willpower-orange" setIsOpen={setIsOpen} isOpen={isOpen}>
                         Space Activations
                     </FloatingPills>
-                    <FloatingPills pillColor="bg-vivid-raspberry" >
+                    <FloatingPills pillColor="bg-vivid-raspberry" setIsOpen={setIsOpen} isOpen={isOpen} >
                         Objects On A Wall
                     </FloatingPills>
-                    <FloatingPills pillColor="bg-blue-violet" >
+                    <FloatingPills pillColor="bg-blue-violet" setIsOpen={setIsOpen} isOpen={isOpen} >
                         Totz n Feelingz Wall
                     </FloatingPills>
                 </div>
