@@ -1,10 +1,11 @@
-import { useState, Fragment } from "react";
-import Head from "next/head";
-import FloatingPills from "../components/floatingpills";
-import { Dialog, Transition } from "@headlessui/react";
+import { useState, Fragment } from 'react'
+import Head from 'next/head'
+import FloatingPills from '../components/floatingpills'
+import { Dialog, Transition } from '@headlessui/react'
+import { NextPage } from 'next'
 
-export default function Home() {
-  let [isOpen, setIsOpen] = useState(false);
+const Home: NextPage = () => {
+  let [isOpen, setIsOpen] = useState(false)
 
   return (
     <>
@@ -30,7 +31,7 @@ export default function Home() {
         >
           <div className="fixed inset-0 bg-black/70 " aria-hidden="true" />
           <Dialog.Panel className="z-10 rounded-xl bg-mikado-yellow px-6 py-4">
-            <Dialog.Title className={"text-2xl font-bold text-black"}>
+            <Dialog.Title className={'text-2xl font-bold text-black'}>
               Deactivate account
             </Dialog.Title>
 
@@ -89,5 +90,7 @@ export default function Home() {
         </div>
       </div>
     </>
-  );
+  )
 }
+
+export default Home
