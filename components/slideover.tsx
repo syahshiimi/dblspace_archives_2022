@@ -6,6 +6,7 @@ interface ISlideOver {
   open: boolean | undefined
   setOpen: Dispatch<SetStateAction<boolean>>
 }
+
 const SlideOver = ({ open, setOpen }: ISlideOver) => {
   return (
     <Transition.Root show={open} as={Fragment}>
@@ -34,7 +35,7 @@ const SlideOver = ({ open, setOpen }: ISlideOver) => {
                 leaveFrom="translate-x-0"
                 leaveTo="translate-x-full"
               >
-                <Dialog.Panel className="pointer-events-auto relative w-screen max-w-md">
+                <Dialog.Panel className="pointer-events-auto relative w-screen max-w-sm">
                   <Transition.Child
                     as={Fragment}
                     enter="ease-in-out duration-500"
@@ -47,7 +48,7 @@ const SlideOver = ({ open, setOpen }: ISlideOver) => {
                     <div className="absolute top-0 left-0 -ml-8 flex pt-4 pr-2 sm:-ml-10 sm:pr-4">
                       <button
                         type="button"
-                        className="rounded-md text-gray-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-white"
+                        className="rounded-md text-gray-300 hover:text-white focus:outline-none "
                         onClick={() => setOpen(false)}
                       >
                         <span className="sr-only">Close panel</span>
@@ -55,21 +56,14 @@ const SlideOver = ({ open, setOpen }: ISlideOver) => {
                       </button>
                     </div>
                   </Transition.Child>
-                  <div className="flex h-full flex-col overflow-y-scroll bg-white py-6 shadow-xl">
+                  <div className="flex h-full flex-col overflow-y-scroll bg-slate-300 py-6 shadow-xl">
                     <div className="px-4 sm:px-6">
-                      <Dialog.Title className="text-lg font-medium text-gray-900">
-                        Panel title
+                      <Dialog.Title className="text-xl font-bold text-gray-900">
+                        Projects
                       </Dialog.Title>
                     </div>
                     <div className="relative mt-6 flex-1 px-4 sm:px-6">
                       {/* Replace with your content */}
-                      <div className="absolute inset-0 px-4 sm:px-6">
-                        <div
-                          className="h-full border-2 border-dashed border-gray-200"
-                          aria-hidden="true"
-                        />
-                      </div>
-                      {/* /End replace */}
                     </div>
                   </div>
                 </Dialog.Panel>
