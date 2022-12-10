@@ -1,13 +1,11 @@
-import { useState, Fragment, useRef } from 'react'
+import { useState } from 'react'
 import Head from 'next/head'
 import FloatingPills from '../components/floatingpills'
-import { Dialog, Transition } from '@headlessui/react'
 import { NextPage } from 'next'
 import DialogBox from '../components/dialog/dialog'
 
 const Home: NextPage = () => {
-  let [isOpen, setIsOpen] = useState(false)
-  let buttonRef = useRef(null)
+  const [isOpen, setIsOpen] = useState(false)
 
   return (
     <>
@@ -16,21 +14,6 @@ const Home: NextPage = () => {
         <meta name="description" content="SAJ" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Transition
-        show={isOpen}
-        enter="transition duration-100 ease-out"
-        enterFrom="transform scale-95 opacity-0"
-        enterTo="transform scale-100 opacity-100"
-        leave="transition duration-75 ease-out"
-        leaveFrom="transform scale-100 opacity-100"
-        leaveTo="transform scale-75 opacity-0"
-        as={Fragment}
-      >
-        <div>
-          <DialogBox isOpen={isOpen} setIsOpen={setIsOpen} />
-        </div>
-      </Transition>
-
       <div className="flex grow flex-col items-center justify-center">
         <div className="container mx-auto flex flex-col items-center justify-center gap-4 ">
           <FloatingPills
@@ -70,6 +53,7 @@ const Home: NextPage = () => {
           </FloatingPills>
         </div>
       </div>
+      <DialogBox isOpen={isOpen} setIsOpen={setIsOpen} />
     </>
   )
 }
