@@ -10,25 +10,18 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>DBLSPACE Residency SAJ 2022</title>
+        <title>an archive of a residency</title>
         <meta name="description" content="SAJ" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="flex grow flex-col items-center justify-center">
         <div className="container mx-auto flex flex-col items-center justify-center gap-4 ">
           <FloatingPills
-            pillColor="bg-mikado-yellow gap-4"
+            pillColor="bg-mikado-yellow"
             setIsOpen={setIsOpen}
             isOpen={isOpen}
           >
             Green Screen Machine
-          </FloatingPills>
-          <FloatingPills
-            pillColor="bg-brilliant-azure"
-            setIsOpen={setIsOpen}
-            isOpen={isOpen}
-          >
-            Field Recordings
           </FloatingPills>
           <FloatingPills
             pillColor="bg-willpower-orange"
