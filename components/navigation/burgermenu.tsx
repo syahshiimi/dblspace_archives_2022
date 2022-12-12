@@ -13,7 +13,7 @@ const BurgerMenu = ({ setOpen }: IBurgerMenu) => {
         viewBox="0 0 24 24"
         strokeWidth={1.5}
         stroke="currentColor"
-        className="h-10 w-10"
+        className="h-10 w-10 stroke-slate-300"
         onClick={() => setOpen(true)}
       >
         <path
